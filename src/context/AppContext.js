@@ -32,7 +32,7 @@ const AppContextProvider = (props) => {
     }
 
     const removeFromCart = (productID) => {
-        setCart(cart.filter((prod) => prod.id !== productID));
+        setCart(cart.filter((prod) => prod.productId !== productID));
     };
 
     return (

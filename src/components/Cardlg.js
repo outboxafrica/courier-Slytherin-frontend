@@ -7,7 +7,7 @@ import { AppContext } from '../context/AppContext'
 const Cardlg = (props) => {
 
     const { productData } = props
-    const { cart, checkProdInCart, addToCart } = useContext(AppContext)
+    const { checkProdInCart, addToCart, removeFromCart } = useContext(AppContext)
 
     const TrimString = (stringLength, string) => { 
         return string.length>stringLength?string.substring(0, stringLength - 3)+"....":string
@@ -15,6 +15,10 @@ const Cardlg = (props) => {
 
     const addProd = () => {
         addToCart(productData.id, 1)
+    }
+
+    const removeProd = () => {
+        removeFromCart(productData.id)
     }
 
     return (
@@ -31,7 +35,7 @@ const Cardlg = (props) => {
             <div className="priceLg">
                 <h2><small>UGX</small>{productData.price}</h2>
                 {checkProdInCart(productData.id)?
-                    <span>Remove From Cart</span>
+                    <span onClick={removeProd}>Remove From Cart</span>
                 :
                     <span onClick={addProd}>Add to cart</span>
                 }
