@@ -58,7 +58,7 @@ const priceRanges = [
 
 const Shop = () => {
 
-    const { isLoaded, products } = useContext(AppContext)
+    const { isLoaded, products, cart } = useContext(AppContext)
 
     const [isFilter, setIsFilter] = useState(false)
     const [productsData, setProductsData] = useState([])
@@ -81,19 +81,19 @@ const Shop = () => {
  
     return (
         <Grid container spacing={4} style={{ padding: '20px 5%' }}>
-            <Grid item xs={12} sm={12} md={12} lg={12} lx={12} style={{ paddingTop: '40px 0px' }} align='center'>
+            <Grid item xs={12} sm={12} md={12} lg={12} lx={12} style={{ padding: '40px 0px' }} align='center'>
                 <Typography variant='h3' style={{ color: '#8a8a8a' }}>
-                    Shop
+                    Shop | Cart ({cart.length})
                 </Typography>
-                <Grid container style={{ padding: '0px 1%' }} >
-                    <Grid item xs={12} sm={12} md={6} lg={6} lx={6} align='left'>
+                <Grid container spacing={1} style={{ padding: '0px 1.5%', paddingTop: '50px' }} >
+                    <Grid item xs={12} sm={12} md={6} lg={3} lx={3} align='left'>
                         <TextField
                             select
                             label="Category"
                             size='small'
                             value={category}
                             onChange={handleCategoryChange}
-                            style={{ width: '50%', alignItems: 'left' }}
+                            style={{ width: '100%', alignItems: 'left' }}
                             Id='textFields'
                             >
                             {categories.map((option) => (
@@ -103,14 +103,16 @@ const Shop = () => {
                             ))}
                         </TextField>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={6} lx={6} align='right'>
+                    <Grid item xs={12} sm={12} md={6} lg={3} lx={3}></Grid>
+                    <Grid item xs={12} sm={12} md={6} lg={3} lx={3}></Grid>
+                    <Grid item xs={12} sm={12} md={6} lg={3} lx={3} align='right'>
                         <TextField
                             select
                             label="Sort By Price"
                             size='small'
                             value={priceRange}
                             onChange={handlePriceChange}
-                            style={{ width: '50%', alignItems: 'left' }}
+                            style={{ width: '100%', alignItems: 'left' }}
                             Id='textFields'
                             >
                             {priceRanges.map((option) => (

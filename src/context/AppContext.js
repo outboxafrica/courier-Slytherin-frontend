@@ -21,8 +21,14 @@ const AppContextProvider = (props) => {
         setIsLoaded(true)
     }
 
+    const checkProdInCart = (prodId) => {
+        return cart.some(function(prod) {
+            return prod.productId === prodId;
+        })
+    }
+
     const addToCart = (productID, productQty) => {
-        setCart(cart => [...cart, {productId:productID,quantity:productQty}])
+        setCart(cart => [...cart, { productId:productID, quantity:productQty }])
     }
 
     const removeFromCart = (productID) => {
@@ -35,6 +41,7 @@ const AppContextProvider = (props) => {
                 isLoaded,
                 products,
                 cart,
+                checkProdInCart,
                 addToCart,
                 removeFromCart
             }}
