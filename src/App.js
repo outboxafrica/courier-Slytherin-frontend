@@ -1,13 +1,14 @@
-import Cardlg from './components/Cardlg';
-import Cardsm from './components/Cardsm';
+import AppContextProvider from './context/AppContext';
 import './App.css';
+
+import Shop from './views/Shop';
 
 function App() {
   return (
     <div className="App">
-        <Cardlg />
-        <div></div>
-        <Cardsm />
+      <AppContextProvider>
+        <Shop />
+      </AppContextProvider>
     </div>
   );
 }

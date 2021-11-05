@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -7,25 +7,27 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   min-height: 100vh;
 
 }
 
+h3,span{
+  font-weight: 400;
+}
+
 .cardLarge {
-  position: relative;
-  width: 344px;
+  margin: 20px;
+  padding: 20px 0px;
+  width: 90%;
   height: 486px;
+  background-color: white;
   border: 1px solid #C4C4C4;
   border-radius: 20px;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
   box-shadow: 8px 11px 9px 0px #0000000F;
-  margin-bottom: 20px;
 }
 
 .productnameLg{
@@ -40,7 +42,7 @@ body {
 
 .priceLg{
   display: flex;
-  width: 80%;
+  width: 300px;
   align-items: center;
   justify-content: space-between;
   
@@ -62,16 +64,28 @@ body {
 }
 
 .iconLg{
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
   border-radius:50%;
   border:solid 1px #C4C4C4;
   font-size: 20px;
   width:40px;
   height:40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   cursor: pointer;
+}
+
+.cardSmall{
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #C4C4C4;
+  border-radius: 20px;
+  width: 542px;
+}
+
+.productDetailsm {
+  margin-top: 20px;
+}
+
+#textFields {
+  border-radius: 10px;
 }
