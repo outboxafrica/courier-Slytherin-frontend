@@ -9,6 +9,7 @@ import AppContextProvider from "./Contexts/AppContext";
 import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Admin from "./pages/Admin/Admin";
+import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="shop/:id" element={<ProductDetails />} />
             <Route path="cart" element={<Cart />} />
           </Routes>
+          <Footer />
         </AppContextProvider>
       </BrowserRouter>
     </div>

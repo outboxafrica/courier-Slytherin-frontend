@@ -55,7 +55,7 @@ const priceRanges = [
 
 const Shop = () => {
 
-    const { isLoaded, products, cart } = useContext(AppContext)
+    const { isLoaded, products } = useContext(AppContext)
 
     const [isFilter, setIsFilter] = useState(false)
     const [productsData, setProductsData] = useState([])
@@ -66,7 +66,7 @@ const Shop = () => {
     // useEffect(() =>{
     //     setProductsData(products)
     // }, [])
-
+    
     const handleCategoryChange = (event) => {
         setCategory(event.target.value)
         setIsFilter(true)
