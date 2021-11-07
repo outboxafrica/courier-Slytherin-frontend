@@ -11,6 +11,16 @@ const AppContextProvider = (props) => {
     setIsLoaded(false);
     getProducts();
   }, []);
+  useEffect(() => {
+    const data = localStorage.getItem("my-cart-list");
+    if (data) {
+      setCart(JSON.parse(data));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("my-cart-list", JSON.stringify(cart));
+  });
 
   const getProducts = async () => {
     await fetch("https://fakestoreapi.com/products")
@@ -37,11 +47,9 @@ const AppContextProvider = (props) => {
   };
 
   const removeFromCartPage = (productID) => {
-         setCart(cart.filter((prod) => prod.productId !== productID));
-        console.log(cart)
-  }
-
-  
+    setCart(cart.filter((prod) => prod.productId !== productID));
+    console.log(cart);
+  };
 
   return (
     <AppContext.Provider
