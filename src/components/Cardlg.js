@@ -1,17 +1,23 @@
-import React from 'react'
-import allstar from '../images/customchuck70.png'
-import { FiHeart } from "react-icons/fi";
+import React, { useContext, useState, useEffect } from 'react'
+import { FiHeart } from "react-icons/fi"
+
+import { AppContext } from '../Contexts/AppContext'
 
 const Cardlg = (props) => {
 
     const { productData } = props
+    const { checkProdInCart, addToCart, removeFromCart } = useContext(AppContext)
 
     const TrimString = (stringLength, string) => { 
         return string.length>stringLength?string.substring(0, stringLength - 3)+"....":string
     }
 
-    const addToCart = () => {
-        console.log('You clicked me')
+    const addProd = () => {
+        addToCart(productData.id, 1, productData.price)
+    }
+
+    const removeProd = () => {
+        removeFromCart(productData.id)
     }
 
     return (
@@ -27,7 +33,11 @@ const Cardlg = (props) => {
             </div>
             <div className="priceLg">
                 <h2><small>UGX</small>{productData.price}</h2>
-                <span onClick={addToCart}>Add to cart</span>
+                {checkProdInCart(productData.id)?
+                    <span onClick={removeProd}>Remove From Cart</span>
+                :
+                    <span onClick={addProd}>Add to cart</span>
+                }
             </div>
         </div>
     )

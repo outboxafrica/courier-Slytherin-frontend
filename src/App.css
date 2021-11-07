@@ -72,12 +72,13 @@ span {
   cursor: pointer;
 }
 
-.cardSmall {
+.cardSmall{
+  padding: 10px;
   display: flex;
   justify-content: space-around;
   border: 1px solid #c4c4c4;
   border-radius: 20px;
-  width: 542px;
+  width: 90%;
 }
 
 .productDetailsm {

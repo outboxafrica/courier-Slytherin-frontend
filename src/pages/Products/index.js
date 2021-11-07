@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 
-import { FiHeart } from "react-icons/fi";
-import { BiLoaderCircle } from "react-icons/bi";
+// import { FiHeart } from "react-icons/fi";
+// import { BiLoaderCircle } from "react-icons/bi";
 
 // Custom components
 import Cardlg from '../../components/Cardlg';
 import Cardsm from '../../components/Cardsm';
 
-import { AppContext } from '../../context/AppContext'
+import { AppContext } from '../../Contexts/AppContext'
 
 const Products = () => {
 
