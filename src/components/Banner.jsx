@@ -3,6 +3,7 @@ import "../Styles/components/Banner.css";
 import bannerImage from "../assets/banner.jpg";
 import { FaFacebook, FaPinterest } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
+import { Link } from "react-router-dom";
 const Banner = () => {
   return (
     <div className="banner">
@@ -24,7 +25,9 @@ const Banner = () => {
             </div>
             <div className="bannerLineBottom"></div>
           </div>
-          <button className="bannerbutton">Shop Now</button>
+          <Link to="/shop">
+            <button className="bannerbutton">Shop Now</button>
+          </Link>
         </div>
       </div>
     </div>

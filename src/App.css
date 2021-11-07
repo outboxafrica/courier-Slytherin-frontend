@@ -30,11 +30,7 @@ span {
   box-shadow: 8px 11px 9px 0px #0000000f;
 }
 
-
-
-
 .productnameLg {
-
   margin-bottom: 20px;
 }
 
@@ -76,7 +72,7 @@ span {
   cursor: pointer;
 }
 
-.cardSmall{
+.cardSmall {
   padding: 10px;
   display: flex;
   justify-content: space-around;
@@ -95,4 +91,28 @@ span {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;800&display=swap");
 .App {
   font-family: "Poppins", sans-serif;
+}
+
+.App-logo > svg {
+  color: #ee9f8b;
+  font-size: 200px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo > svg {
+    animation: App-logo-spin infinite 5s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+a {
+  text-decoration: none;
+  color: #000;
 }
