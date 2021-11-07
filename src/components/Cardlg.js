@@ -1,8 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
-import allstar from '../images/customchuck70.png'
 import { FiHeart } from "react-icons/fi"
 
-import { AppContext } from '../context/AppContext'
+import { AppContext } from '../Contexts/AppContext'
 
 const Cardlg = (props) => {
 
@@ -14,7 +13,7 @@ const Cardlg = (props) => {
     }
 
     const addProd = () => {
-        addToCart(productData.id, 1)
+        addToCart(productData.id, 1, productData.price)
     }
 
     const removeProd = () => {

@@ -1,18 +1,15 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import {
     Grid,
     Typography,
     TextField,
     MenuItem
 } from '@mui/material';
-import { FiHeart } from "react-icons/fi";
-import { BiLoaderCircle } from "react-icons/bi";
 
 // Custom components
 import Cardlg from '../../components/Cardlg';
-import Cardsm from '../../components/Cardsm';
 
-import { AppContext } from '../../context/AppContext'
+import { AppContext } from '../../Contexts/AppContext'
 
 const categories = [
     {
@@ -65,6 +62,7 @@ const Shop = () => {
     const [category, setCategory] = useState('')
     const [priceRange, setPriceRange] = useState('')
 
+    // For the filtering feature of products data
     // useEffect(() =>{
     //     setProductsData(products)
     // }, [])
@@ -83,7 +81,7 @@ const Shop = () => {
         <Grid container spacing={4} style={{ padding: '20px 5%' }}>
             <Grid item xs={12} sm={12} md={12} lg={12} lx={12} style={{ padding: '40px 0px' }} align='center'>
                 <Typography variant='h3' style={{ color: '#8a8a8a' }}>
-                    Shop | Cart ({cart.length})
+                    Shop
                 </Typography>
                 <Grid container spacing={1} style={{ padding: '0px 1.5%', paddingTop: '50px' }} >
                     <Grid item xs={12} sm={12} md={6} lg={3} lx={3} align='left'>

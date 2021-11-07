@@ -75,11 +75,12 @@ h3,span{
 }
 
 .cardSmall{
+  padding: 10px;
   display: flex;
   justify-content: space-around;
   border: 1px solid #C4C4C4;
   border-radius: 20px;
-  width: 542px;
+  width: 90%;
 }
 
 .productDetailsm {
