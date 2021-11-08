@@ -107,7 +107,7 @@ const Cart = () => {
             <Box style={{ height: "350px" }}>
               <div className="total">
                 {cart.length !== 0 && cart.forEach((i) => (total += i.price))}
-                <h3>Total:{total}USD</h3>
+                <h3>Cart Total: {total}USD</h3>
                 {console.log(cart)}
               </div>
             </Box>
