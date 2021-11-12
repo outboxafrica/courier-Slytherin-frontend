@@ -10,3 +10,27 @@
 .home{
     margin: auto;
 }
+
+.newArrivals > p {
+    text-align: center;
+    color: #8A8A8A;
+    font-size: 35px;
+    font-weight: 400;
+    margin-top: 100px;
+}
+
+.newArrivalsContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+.popularContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}

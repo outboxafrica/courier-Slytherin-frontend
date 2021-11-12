@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
-import { Grid, Typography, Button, Box, MenuItem } from "@mui/material";
+import React, { useContext } from "react";
+import { Grid, Typography, Button, Box } from "@mui/material";
 
 // Custom components
 import Cardsm from "../../components/Cardsm";
 
-import { AppContext, cart } from "../../Contexts/AppContext";
+import { AppContext } from "../../Contexts/AppContext";
 
 let total = 0;
 const Cart = () => {

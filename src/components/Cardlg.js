@@ -32,7 +32,7 @@ const Cardlg = (props) => {
             </div>
             <Link to={url}>
             <div className="imgLg" style={{ height: '298px', overflow: 'hidden'  }}>
-                <img src={productData.image} style={{ width: '60%' }} alt="" />
+                <img src={productData.image} style={{ width: '60%', margin: 'auto' }} alt="" />
             </div>
             </Link>
             <div className="productnameLg" style={{ padding: '5px 10px' }}>
